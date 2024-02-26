@@ -1,9 +1,12 @@
-# WESTERN GOVERNOR UNIVERSITY 
 ## D287 – JAVA FRAMEWORKS
 
 ## PART C
 Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
 
+-I first changed the title of the webpage to "Ryan's Mechanical Keyboard Shop" in the mainscreen.html file on line 17.
+I also changed the header of the webpage to "Ryan's Mechanical Keyboard Shop" in the mainscreen.html file on line 22.
+I created a CSS file called styles.css under the css directory and linked it to mainscreen.html on line 15. 
+In styles.css I centered the "container" div on lines 1-3. I also changed the background color to dark grey on lines 5-7 in styles.css.
 
 ## PART D
 Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
