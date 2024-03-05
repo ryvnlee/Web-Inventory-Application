@@ -3,30 +3,32 @@
 ## PART C
 Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
 
--changed the title of the webpage to "Ryan's Mechanical Keyboard Shop" in the mainscreen.html file on line 17\
--changed the header of the webpage to "Ryan's Mechanical Keyboard Shop" in the mainscreen.html file on line 22\
--created a CSS file called styles.css under the css directory and linked it to mainscreen.html on line 15\
--in styles.css I centered the "container" div on line 3\
--changed the background color to dark grey on line 2 in styles.css
+-Changed the title of the webpage to "Ryan's Mechanical Keyboard Shop" in the mainscreen.html file on line 17\
+-Changed the header of the webpage to "Ryan's Mechanical Keyboard Shop" in the mainscreen.html file on line 22\
+-Created a CSS file called styles.css under the css directory and linked it to mainscreen.html on line 15\
+-In styles.css I centered the "container" div on line 3\
+-Changed the background color to dark grey on line 2 in styles.css
 
 ## PART D
 Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 
--created an about.html file in the templates directory\
--changed the title of the "About" page in about.html on line 9\
--added a header of the "About" page in about.html on line 13\
--added a "Who We Are" section on the "About" page in about.html on lines 16-17\
--added a "Our Mission" section on the "About" page in about.html on lines 20-21\
--added a "Contact Us" section on the "About" page in about.html on lines 24-25\
--added a "Back to Home" button on the "About" page in about.html on line 27\
--created an AboutController.java class in the controller directory\
--added @Controller, @GetMapping, and the about method to AboutController.java to return the about.html page when requested on lines 6-13\
--added an "About" button in mainscreen.html on line 23\
--changed the background color, text alignment, and line spacing for the "About" page in the styles.css file on lines 1-4 and 6-8\
+-Created an about.html file in the templates directory\
+-Changed the title of the "About" page in about.html on line 9\
+-Added a header of the "About" page in about.html on line 13\
+-Added a "Who We Are" section on the "About" page in about.html on lines 16-17\
+-Added a "Our Mission" section on the "About" page in about.html on lines 20-21\
+-Added a "Contact Us" section on the "About" page in about.html on lines 24-25\
+-Added a "Back to Home" button on the "About" page in about.html on line 27\
+-Created an AboutController.java class in the controller directory\
+-Added @Controller, @GetMapping, and the about method to AboutController.java to return the about.html page when requested on lines 6-13\
+-Added an "About" button in mainscreen.html on line 23\
+-Changed the background color, text alignment, and line spacing for the "About" page in the styles.css file on lines 1-4 and 6-8
 
 ## PART E
 Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 
+-Added 5 sample parts(switches, keycaps, cases, pcbs, stabilizers) in the BootStrapData.java file on lines 43-89\
+-Added 5 sample products(full-size keyboard, TKL keyboard, 75%, 60%, 40%) in the BootStrapData.java file on lines 97-106
 
 ## PART F
 Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:

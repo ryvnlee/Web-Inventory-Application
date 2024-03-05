@@ -39,21 +39,54 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-       /*
-        OutsourcedPart o= new OutsourcedPart();
-        o.setCompanyName("Western Governors University");
-        o.setName("out test");
-        o.setInv(5);
-        o.setPrice(20.0);
-        o.setId(100L);
-        outsourcedPartRepository.save(o);
+        /*
+        OutsourcedPart switches = new OutsourcedPart();
+        switches.setCompanyName("Ryan's Mechanical Keyboard Store");
+        switches.setName("Keyboard Switches");
+        switches.setInv(1000);
+        switches.setPrice(0.50);
+        switches.setId(1);
+        outsourcedPartRepository.save(switches);
+
+        OutsourcedPart keycaps = new OutsourcedPart();
+        keycaps.setName("Keycap Set");
+        keycaps.setInv(50);
+        keycaps.setPrice(100.0);
+        keycaps.setId(2);
+        outsourcedPartRepository.save(keycaps);
+
+        OutsourcedPart cases = new OutsourcedPart();
+        cases.setName("Keyboard Case");
+        cases.setInv(50);
+        cases.setPrice(120.0);
+        cases.setId(3);
+        outsourcedPartRepository.save(cases);
+
+        OutsourcedPart pcb = new OutsourcedPart();
+        pcb.setName("Keyboard PCB");
+        pcb.setInv(50);
+        pcb.setPrice(60.0);
+        pcb.setId(4);
+        outsourcedPartRepository.save(pcb);
+
+        OutsourcedPart stabilizers = new OutsourcedPart();
+        stabilizers.setName("Stabilizer Set");
+        stabilizers.setInv(50);
+        stabilizers.setPrice(25.0);
+        stabilizers.setId(5);
+        outsourcedPartRepository.save(stabilizers);
+
         OutsourcedPart thePart=null;
         List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
         for(OutsourcedPart part:outsourcedParts){
             if(part.getName().equals("out test"))thePart=part;
         }
 
-        System.out.println(thePart.getCompanyName());
+        if(thePart != null) {
+            System.out.println(thePart.getCompanyName());
+        } else {
+            System.out.println("Part is not found or does not exist.");
+        }
         */
         List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
         for(OutsourcedPart part:outsourcedParts){
@@ -61,10 +94,16 @@ public class BootStrapData implements CommandLineRunner {
         }
 
         /*
-        Product bicycle= new Product("bicycle",100.0,15);
-        Product unicycle= new Product("unicycle",100.0,15);
-        productRepository.save(bicycle);
-        productRepository.save(unicycle);
+        Product fullSize= new Product("Full-Size Keyboard",100.0,15);
+        Product tenKeyLess= new Product("TKL Keyboard",90.0,15);
+        Product keyboard75= new Product("75% Keyboard",80.0,15);
+        Product keyboard60= new Product("60% Keyboard",70.0,15);
+        Product keyboard40= new Product("40% Keyboard",60.0,15);
+        productRepository.save(fullSize);
+        productRepository.save(tenKeyLess);
+        productRepository.save(keyboard75);
+        productRepository.save(keyboard60);
+        productRepository.save(keyboard40);
         */
 
         System.out.println("Started in Bootstrap");
