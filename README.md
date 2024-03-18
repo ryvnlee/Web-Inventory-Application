@@ -36,6 +36,18 @@ Add a “Buy Now” button to your product list. Your “Buy Now” button must 
 •  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
 •  Display a message that indicates the success or failure of a purchase.
 
+-Created a "Buy Now" button in mainscreen.html on line 87\
+-Created the BuyNowController.java file in the controllers directory\
+-Added the @Controller to the BuyNowController class in BuyNowController.java on line 12\
+-Created the "productRepository" variable and added the @Autowired annotation in BuyNowController.java on lines 15-16\
+-Created the "buyNow" method and annotated with @GetMapping in BuyNowController.java on lines 18-37\
+-Created the purchasesuccess.html file in the templates directory\
+-Created the purchaseerror.html file in the templates directory\
+-Added a "Purchase success" message in purchasesuccess.html on lines 16-17\
+-Added a "Back to Home" button in purchasesuccess.html on line 19\
+-Added a "Purchase error" message in purchaseerror.html on lines 16-17\
+-Added a "Back to Home" button in purchaseerror.hml on line 19\
+
 ## PART G
 Modify the parts to track maximum and minimum inventory by doing the following:
 •  Add additional fields to the part entity for maximum and minimum inventory.
