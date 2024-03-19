@@ -46,7 +46,7 @@ Add a “Buy Now” button to your product list. Your “Buy Now” button must 
 -Added a "Purchase success" message in purchasesuccess.html on lines 16-17\
 -Added a "Back to Home" button in purchasesuccess.html on line 19\
 -Added a "Purchase error" message in purchaseerror.html on lines 16-17\
--Added a "Back to Home" button in purchaseerror.hml on line 19\
+-Added a "Back to Home" button in purchaseerror.hml on line 19
 
 ## PART G
 Modify the parts to track maximum and minimum inventory by doing the following:
@@ -55,6 +55,24 @@ Modify the parts to track maximum and minimum inventory by doing the following:
 •  Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values.
 •  Rename the file the persistent storage is saved to.
 •  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
+
+-Added the "Max Inventory" and "Min Inventory" headers to the table in mainscreen.html on lines 42-43\
+-Added the "tempPart.maxInv" and "tempPart.minInv" data to the table in mainscreen.html on lines 52-53\
+-Declared "maxInv" variable and used @Min annotation in Part.java on lines 31-32\
+-Declared "minInv" variable and used @Min annotation in Part.java on lines 33-34\
+-Added constructors for the "maxInv" variable in Part.java on lines 48 and 57\
+-Added constructors for the "minInv" variable in Part.java on lines 49 and 58\
+-Added getters for the "maxInv" variable in Part.java on lines 93 and 97\
+-Added setters for the "minInv" variable in Part.java on lines 95 and 99\
+-Created "isValidInventory" method in Part.java on lines 127-129\
+-Created conditional statement using "isValidInventory" method to generate error message for invalid inventory in AddInhousePartController.java on lines 43-46\
+-Created conditional statement using "isValidInventory" method to generate error message for invalid inventory in AddOutsourcedPartController.java on lines 44-47\
+-Added max and min inventory values for each of my sample parts inventory in BootStrapData.java on lines 49-50, 58-59, 67-68, 76-77, and 85-86\
+-Added additional text inputs for both max and min inventory values in InhousePartForm.html on lines 29-33\
+-Added additional text inputs for both max and min inventory values in OutsourcedPartForm.html on lines 30-34\
+-Added "Back to Home" button in InhousePartForm.html on line 39\
+-Added "Back to Home" button in OutsourcedPartForm.html on line 39\
+-Renamed the file the persistent storage is saved to "database" in application.properties on line 6
 
 ## PART H
 Add validation for between or at the maximum and minimum fields. The validation must include the following:

@@ -46,6 +46,8 @@ public class BootStrapData implements CommandLineRunner {
         switches.setInv(1000);
         switches.setPrice(0.50);
         switches.setId(1);
+        switches.setMaxInv(10000);
+        switches.setMinInv(1);
         outsourcedPartRepository.save(switches);
 
         OutsourcedPart keycaps = new OutsourcedPart();
@@ -53,6 +55,8 @@ public class BootStrapData implements CommandLineRunner {
         keycaps.setInv(50);
         keycaps.setPrice(100.0);
         keycaps.setId(2);
+        keycaps.setMaxInv(1000);
+        keycaps.setMinInv(1);
         outsourcedPartRepository.save(keycaps);
 
         OutsourcedPart cases = new OutsourcedPart();
@@ -60,6 +64,8 @@ public class BootStrapData implements CommandLineRunner {
         cases.setInv(50);
         cases.setPrice(120.0);
         cases.setId(3);
+        cases.setMaxInv(500);
+        cases.setMinInv(1);
         outsourcedPartRepository.save(cases);
 
         OutsourcedPart pcb = new OutsourcedPart();
@@ -67,6 +73,8 @@ public class BootStrapData implements CommandLineRunner {
         pcb.setInv(50);
         pcb.setPrice(60.0);
         pcb.setId(4);
+        pcb.setMaxInv(500);
+        pcb.setMinInv(1);
         outsourcedPartRepository.save(pcb);
 
         OutsourcedPart stabilizers = new OutsourcedPart();
@@ -74,7 +82,10 @@ public class BootStrapData implements CommandLineRunner {
         stabilizers.setInv(50);
         stabilizers.setPrice(25.0);
         stabilizers.setId(5);
+        stabilizers.setMaxInv(300);
+        stabilizers.setMinInv(1);
         outsourcedPartRepository.save(stabilizers);
+         */
 
         OutsourcedPart thePart=null;
         List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
@@ -87,12 +98,12 @@ public class BootStrapData implements CommandLineRunner {
         } else {
             System.out.println("Part is not found or does not exist.");
         }
-        */
+        /*
         List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
         for(OutsourcedPart part:outsourcedParts){
             System.out.println(part.getName()+" "+part.getCompanyName());
         }
-
+        */
         /*
         Product fullSize= new Product("Full-Size Keyboard",100.0,15);
         Product tenKeyLess= new Product("TKL Keyboard",90.0,15);
