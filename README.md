@@ -92,5 +92,8 @@ Add validation for between or at the maximum and minimum fields. The validation 
 ## PART I
 Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 
+-Added a unit test using the "upperBounds" method and passed in PartTest.java on lines 160-167\
+-Added a unit test using the "lowerBounds" method and passed in PartTest.java on lines 169-176\
+
 ## PART J
 Remove the class files for any unused validators in order to clean your code.
