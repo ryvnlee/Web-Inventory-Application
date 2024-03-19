@@ -39,7 +39,6 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        /*
         OutsourcedPart switches = new OutsourcedPart();
         switches.setCompanyName("Ryan's Mechanical Keyboard Store");
         switches.setName("Keyboard Switches");
@@ -85,7 +84,6 @@ public class BootStrapData implements CommandLineRunner {
         stabilizers.setMaxInv(300);
         stabilizers.setMinInv(10);
         outsourcedPartRepository.save(stabilizers);
-        */
 
         OutsourcedPart thePart=null;
         List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
@@ -104,7 +102,7 @@ public class BootStrapData implements CommandLineRunner {
             System.out.println(part.getName()+" "+part.getCompanyName());
         }
         */
-        /*
+
         Product fullSize= new Product("Full-Size Keyboard",100.0,15);
         Product tenKeyLess= new Product("TKL Keyboard",90.0,15);
         Product keyboard75= new Product("75% Keyboard",80.0,15);
@@ -115,7 +113,6 @@ public class BootStrapData implements CommandLineRunner {
         productRepository.save(keyboard75);
         productRepository.save(keyboard60);
         productRepository.save(keyboard40);
-        */
 
         System.out.println("Started in Bootstrap");
         System.out.println("Number of Products"+productRepository.count());

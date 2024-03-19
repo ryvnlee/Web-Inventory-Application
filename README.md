@@ -27,8 +27,8 @@ Add an “About” page to the application to describe your chosen customer’s 
 ## PART E
 Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 
--Added 5 sample parts(switches, keycaps, cases, pcbs, stabilizers) in the BootStrapData.java file on lines 43-89\
--Added 5 sample products(full-size keyboard, TKL keyboard, 75%, 60%, 40%) in the BootStrapData.java file on lines 97-106
+-Added 5 sample parts(switches, keycaps, cases, pcbs, stabilizers) in the BootStrapData.java file on lines 42-86\
+-Added 5 sample products(full-size keyboard, TKL keyboard, 75%, 60%, 40%) in the BootStrapData.java file on lines 106-115
 
 ## PART F
 Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
@@ -36,7 +36,7 @@ Add a “Buy Now” button to your product list. Your “Buy Now” button must 
 •  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
 •  Display a message that indicates the success or failure of a purchase.
 
--Created a "Buy Now" button in mainscreen.html on line 87\
+-Created a "Buy Now" button in mainscreen.html on line 91\
 -Created the BuyNowController.java file in the controllers directory\
 -Added the @Controller to the BuyNowController class in BuyNowController.java on line 12\
 -Created the "productRepository" variable and added the @Autowired annotation in BuyNowController.java on lines 15-16\
@@ -62,12 +62,12 @@ Modify the parts to track maximum and minimum inventory by doing the following:
 -Declared "minInv" variable and used @Min annotation in Part.java on lines 33-34\
 -Added constructors for the "maxInv" variable in Part.java on lines 48 and 57\
 -Added constructors for the "minInv" variable in Part.java on lines 49 and 58\
--Added getters for the "maxInv" variable in Part.java on lines 93 and 97\
--Added setters for the "minInv" variable in Part.java on lines 95 and 99\
+-Added getters for the "maxInv" and "minInv" variable in Part.java on lines 93 and 97\
+-Added setters for the "maxInv" and "minInv" variable in Part.java on lines 95 and 99\
 -Created "isValidInventory" method in Part.java on lines 127-129\
 -Created a conditional statement using "isValidInventory" method to generate error message for invalid inventory in AddInhousePartController.java on lines 43-46\
 -Created a conditional statement using "isValidInventory" method to generate error message for invalid inventory in AddOutsourcedPartController.java on lines 44-47\
--Added max and min inventory values for each of my sample parts inventory in BootStrapData.java on lines 49-50, 58-59, 67-68, 76-77, and 85-86\
+-Added max and min inventory values for each of my sample parts inventory in BootStrapData.java on lines 48-49, 57-58, 66-67, 75-76, and 84-85\
 -Added additional text inputs for both max and min inventory values in InhousePartForm.html on lines 29-33\
 -Added additional text inputs for both max and min inventory values in OutsourcedPartForm.html on lines 30-34\
 -Added "Back to Home" button in InhousePartForm.html on line 39\
@@ -80,8 +80,8 @@ Add validation for between or at the maximum and minimum fields. The validation 
 •  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 •  Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
--Created the "lowerBounds" method to check if value is at the minimum inventory value in Part.java on lines 131-133/
--Created the "upperBounds" method to check if value is at the maximum inventory value in Part.java on lines 135-137/
+-Created the "lowerBounds" method to check if value is at the minimum inventory value in Part.java on lines 131-133\
+-Created the "upperBounds" method to check if value is at the maximum inventory value in Part.java on lines 135-137\
 -Created a conditional statement using the "lowerBounds" method to validate if inventory amounts in AddInhousePartController.java on lines 48-51\
 -Created a conditional statement using the "upperBounds" method to validate if inventory amounts in AddInhousePartController.java on lines 53-56\
 -Created a conditional statement using the "lowerBounds" method to validate if inventory amounts in AddOutsourcedPartController.java on lines 49-52\
@@ -93,7 +93,9 @@ Add validation for between or at the maximum and minimum fields. The validation 
 Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 
 -Added a unit test using the "upperBounds" method and passed in PartTest.java on lines 160-167\
--Added a unit test using the "lowerBounds" method and passed in PartTest.java on lines 169-176\
+-Added a unit test using the "lowerBounds" method and passed in PartTest.java on lines 169-176
 
 ## PART J
 Remove the class files for any unused validators in order to clean your code.
+
+-Removed the DeletePartValidator.java class as it was not used
