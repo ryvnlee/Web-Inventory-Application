@@ -65,8 +65,8 @@ Modify the parts to track maximum and minimum inventory by doing the following:
 -Added getters for the "maxInv" variable in Part.java on lines 93 and 97\
 -Added setters for the "minInv" variable in Part.java on lines 95 and 99\
 -Created "isValidInventory" method in Part.java on lines 127-129\
--Created conditional statement using "isValidInventory" method to generate error message for invalid inventory in AddInhousePartController.java on lines 43-46\
--Created conditional statement using "isValidInventory" method to generate error message for invalid inventory in AddOutsourcedPartController.java on lines 44-47\
+-Created a conditional statement using "isValidInventory" method to generate error message for invalid inventory in AddInhousePartController.java on lines 43-46\
+-Created a conditional statement using "isValidInventory" method to generate error message for invalid inventory in AddOutsourcedPartController.java on lines 44-47\
 -Added max and min inventory values for each of my sample parts inventory in BootStrapData.java on lines 49-50, 58-59, 67-68, 76-77, and 85-86\
 -Added additional text inputs for both max and min inventory values in InhousePartForm.html on lines 29-33\
 -Added additional text inputs for both max and min inventory values in OutsourcedPartForm.html on lines 30-34\
@@ -79,6 +79,15 @@ Add validation for between or at the maximum and minimum fields. The validation 
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
 •  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 •  Display error messages when adding and updating parts if the inventory is greater than the maximum.
+
+-Created the "lowerBounds" method to check if value is at the minimum inventory value in Part.java on lines 131-133/
+-Created the "upperBounds" method to check if value is at the maximum inventory value in Part.java on lines 135-137/
+-Created a conditional statement using the "lowerBounds" method to validate if inventory amounts in AddInhousePartController.java on lines 48-51\
+-Created a conditional statement using the "upperBounds" method to validate if inventory amounts in AddInhousePartController.java on lines 53-56\
+-Created a conditional statement using the "lowerBounds" method to validate if inventory amounts in AddOutsourcedPartController.java on lines 49-52\
+-Created a conditional statement using the "upperBounds" method to validate if inventory amounts in AddOutsourcedPartController.java on lines 54-57\
+-Edited the error message to be more accurate in ValidEnufParts.java on line 20\
+-Added a conditional statement that checks that the part inventory does not fall below minimum when buying a creating a product in EnufPartsValidator.java on line 36
 
 ## PART I
 Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.

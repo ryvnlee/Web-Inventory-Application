@@ -127,4 +127,12 @@ public abstract class Part implements Serializable {
     public boolean isValidInventory() {
         return inv >= minInv && inv <= maxInv;
     }
+
+    public boolean lowerBounds() {
+        return inv > (minInv - 1);
+    }
+
+    public boolean upperBounds() {
+        return inv <= maxInv;
+    }
 }

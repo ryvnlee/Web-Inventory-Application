@@ -45,6 +45,16 @@ public class AddInhousePartController{
             return "InhousePartForm";
         }
 
+        if(!part.lowerBounds()){
+            theBindingResult.rejectValue("inv","error.inv", "This is below the minimum inventory value.");
+            return "InhousePartForm";
+        }
+
+        if(!part.upperBounds()){
+            theBindingResult.rejectValue("inv", "error.inv", "This is above the maximum inventory value.");
+            return "InhousePartForm";
+        }
+
         if(theBindingResult.hasErrors()){
             return "InhousePartForm";
         }

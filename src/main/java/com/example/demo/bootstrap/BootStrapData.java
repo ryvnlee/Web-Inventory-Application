@@ -47,7 +47,7 @@ public class BootStrapData implements CommandLineRunner {
         switches.setPrice(0.50);
         switches.setId(1);
         switches.setMaxInv(10000);
-        switches.setMinInv(1);
+        switches.setMinInv(50);
         outsourcedPartRepository.save(switches);
 
         OutsourcedPart keycaps = new OutsourcedPart();
@@ -56,7 +56,7 @@ public class BootStrapData implements CommandLineRunner {
         keycaps.setPrice(100.0);
         keycaps.setId(2);
         keycaps.setMaxInv(1000);
-        keycaps.setMinInv(1);
+        keycaps.setMinInv(10);
         outsourcedPartRepository.save(keycaps);
 
         OutsourcedPart cases = new OutsourcedPart();
@@ -65,7 +65,7 @@ public class BootStrapData implements CommandLineRunner {
         cases.setPrice(120.0);
         cases.setId(3);
         cases.setMaxInv(500);
-        cases.setMinInv(1);
+        cases.setMinInv(15);
         outsourcedPartRepository.save(cases);
 
         OutsourcedPart pcb = new OutsourcedPart();
@@ -74,7 +74,7 @@ public class BootStrapData implements CommandLineRunner {
         pcb.setPrice(60.0);
         pcb.setId(4);
         pcb.setMaxInv(500);
-        pcb.setMinInv(1);
+        pcb.setMinInv(10);
         outsourcedPartRepository.save(pcb);
 
         OutsourcedPart stabilizers = new OutsourcedPart();
@@ -83,9 +83,9 @@ public class BootStrapData implements CommandLineRunner {
         stabilizers.setPrice(25.0);
         stabilizers.setId(5);
         stabilizers.setMaxInv(300);
-        stabilizers.setMinInv(1);
+        stabilizers.setMinInv(10);
         outsourcedPartRepository.save(stabilizers);
-         */
+        */
 
         OutsourcedPart thePart=null;
         List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
